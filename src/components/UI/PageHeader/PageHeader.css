@@ -1,0 +1,19 @@
+.pageHeaderWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width :700px) {
+    .pageHeaderWrapper {
+        gap: 5px;
+    }
+
+    .pageHeaderWrapper h1 {
+        font-size: x-large;
+    }
+
+    .pageHeaderIcon {
+        size: 50;
+    }
+}

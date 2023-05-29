@@ -1,0 +1,288 @@
+.settingsPage {
+    display: flex;
+    padding: 2rem 4rem 2rem 4rem;
+    margin-bottom: 9rem;
+    flex-direction: column;
+
+}
+
+.settingPageContent {
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: white; */
+}
+
+.settingsPageContentHeader {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    align-items: center;
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.2);
+    justify-content: space-between;
+}
+
+.settingsPageContentHeaderTitle {
+    /* border: 1px solid blue; */
+}
+
+.settingsPageContentHeaderTitle h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.settingsPageContentHeaderTitle p {
+    font-size: 0.7rem;
+    font-weight: 200;
+    padding: 0;
+    text-transform: capitalize;
+    margin: 0;
+    color: rgb(114, 114, 114);
+}
+
+.settingsPageContentImgDiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsPageContentHeaderImg {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.settingsImgEditIcon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem;
+    cursor: pointer;
+    border: black;
+}
+
+.settingsPageContentForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 3rem 0;
+
+}
+
+.settingsPageCon {
+    width: 80%;
+    border-radius: 15px;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.2);
+}
+
+.settingsInputGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    border-bottom: 1px solid rgb(233, 231, 231);
+}
+
+.settingsInput {
+    width: 50%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.settingsInputLabel {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsInputLabel span {
+    color: rgb(82, 80, 80);
+    font-size: 0.8rem;
+}
+
+.settingsInputLabel label {
+    color: rgb(0, 0, 0);
+    font: 700 1rem;
+}
+
+.settingsPageContentFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.settingsPageContentFooterIcon {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 15, 15);
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 15px;
+}
+
+
+.settingsPageContentFooterIcon span {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+.settingsPageContentFooterIcon:hover {
+    background-color: rgb(126, 24, 24);
+    color: #fff;
+}
+
+.settingsPageContentFooterHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: rgb(255, 15, 15);
+    border-bottom: 1px solid rgb(156, 155, 155);
+}
+
+
+.settingsInputSave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #45DA94;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.settingsInputSave:hover {
+    background-color: #184b33;
+}
+
+.settingsInputSave span {
+    margin-top: 4px;
+}
+
+@media screen and (max-width :700px) {
+    .settingsPage {
+        display: flex;
+        padding: 0rem 0.5rem 3rem 0.5rem;
+        margin-bottom: 9rem;
+        flex-direction: column;
+
+    }
+
+    .settingsPageContentHeader {
+        display: flex;
+        box-sizing: unset;
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        align-items: center;
+        box-shadow: unset;
+        justify-content: center;
+    }
+
+    .settingsPageContentHeaderTitle h5 {
+        display: none;
+
+    }
+
+
+
+    .settingsPageContentHeaderImg {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .settingsImgEditIcon {
+        font-size: 30px;
+    }
+
+    .settingsPageContentHeaderTitle p {
+        display: none;
+    }
+
+    .settingsPageCon {
+        width: 100%;
+        box-shadow: unset
+    }
+
+    .settingsInputGroup {
+
+        padding: 1rem 0.5rem 1rem 0.5rem;
+
+    }
+
+    .settingsInputLabel {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .settingsInputLabel span {
+        color: rgb(20, 19, 19);
+        font-size: 0.5em;
+    }
+
+    .settingsInputLabel label {
+        color: rgb(0, 0, 0);
+        font: 4 1rem;
+    }
+
+    .settingsInput {
+        width: 50%;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border: none;
+        border-bottom: 1px solid rgb(149, 146, 146);
+    }
+
+    .settingsInput:focus {
+        outline: none;
+    }
+
+    .settingsPageContentFooter {
+        padding: 1rem 0 1rem 0;
+    }
+
+    .settingsPageContentFooterIcon {
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+
+    .settingsPageContentFooterIcon span {
+        font-size: 1rem;
+    }
+
+    .settingsInputSave {
+        right: 4px;
+        bottom: 70px;
+    }
+}

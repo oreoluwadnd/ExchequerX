@@ -1,0 +1,54 @@
+.SavingTilesWrapper {
+    width: 100%;
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.4);
+    display: flex;
+    padding: 1rem;
+
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+.SavingTilesIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.SavingTilesIconWrapper {
+    border-radius: 2px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0.3rem;
+    background-color: black;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.SavingTilesIconWrapper:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+.SavingTilesText {
+    display: flex;
+    line-height: 0;
+    flex-direction: column;
+
+}
+
+.SavingTilesText h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.SavingTilesText p {
+    font-size: 1rem;
+    font-weight: 400;
+}

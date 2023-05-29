@@ -1,0 +1,97 @@
+.solutionRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    padding: 6rem 1rem 6rem 1rem;
+}
+
+.solutionRightImgDiv {
+    margin-left: 300px;
+}
+
+.solutionRightImg {
+    max-width: 352px;
+}
+
+.solutionRightText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 200px;
+    margin-left: 100px;
+    color: white;
+}
+
+.solutionRightText h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -.035rem;
+}
+
+.solutionRightText p {
+    font-size: 1.25rem;
+    letter-spacing: -.035rem;
+}
+
+@media screen and (max-width :1000px) {
+    .solutionRightText {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .solutionRightImgDiv {
+        margin-left: 30px;
+    }
+
+}
+
+@media screen and (max-width :1240px) {
+    .solutionRightText {
+        margin-right: 50px;
+        margin-right: 50px;
+    }
+
+    .solutionRightImgDiv {
+        margin-left: 150px;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width :700px) {
+    .solutionRight {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .solutionRightText {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .solutionRightImgDiv {
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .solutionRightImg {
+        max-width: 100%;
+    }
+
+}

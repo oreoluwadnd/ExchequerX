@@ -1,0 +1,36 @@
+.otpModalWrapper {
+    background-color: white;
+    padding: 3rem 3rem;
+    width: 80%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.otpModalIcon {
+    font-size: 5rem;
+    color: #45DA94;
+}
+
+.otpModalHeader {
+    line-height: 0;
+}
+
+.otpModalButton {
+    padding: 0.5rem;
+    background-color: black;
+    width: 80%;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.otpModalButton:hover {
+    background-color: rgb(65, 64, 64);
+}

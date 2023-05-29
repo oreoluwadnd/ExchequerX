@@ -1,0 +1,125 @@
+.CardDetailsContainer {
+    width: 55%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 2rem 0 0 0;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.2);
+
+}
+
+.CardDetailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0 2rem 0 2rem;
+    border-bottom: 1px solid black;
+}
+
+.CardDetailsHeaderText {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 0;
+}
+
+.CardDetailsShow {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0.2rem;
+    line-height: 0;
+    margin: 0.3rem;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+    color: rgb(98, 96, 96);
+}
+
+.CardDetailsShow:hover {
+    color: black;
+}
+
+.CardInputGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.CardDetailsSingleInput {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    border-bottom: 1px solid rgb(118, 119, 120);
+    box-sizing: border-box;
+    padding: 1rem 0 0 1rem;
+    width: 50%;
+    margin: 0 1rem 0.5rem 1rem;
+    height: fit-content;
+    position: relative;
+
+}
+
+
+
+.CardCopyIcon {
+    position: absolute;
+    right: 0;
+    top: 29px;
+    cursor: pointer;
+    color: rgb(118, 119, 120);
+    ;
+}
+
+.CardDetailTitle {
+    font-size: 1rem;
+    padding: 0;
+    font-weight: 100;
+    color: rgb(118, 119, 120);
+}
+
+.CardDetailInfo {
+    font-size: 1rem;
+    padding: 0;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width :700px) {
+    .CardDetailsContainer {
+        width: 100%;
+    }
+
+    .CardInputGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    .CardDetailsSingleInput {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+        border-bottom: 1px solid rgb(217, 217, 217);
+        box-sizing: border-box;
+        padding: 0.5rem 2rem 0 1rem;
+        width: 100%;
+
+    }
+
+    .CardCopyIcon {
+        position: absolute;
+        right: 15px;
+        top: 29px;
+    }
+
+    .CardDetailsHeader {
+        padding: 0 0.5rem 0.5rem;
+        border-bottom: 1px solid rgb(179, 178, 178);
+    }
+
+}

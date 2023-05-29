@@ -1,0 +1,132 @@
+.testimonialContainer {
+    background-color: #FAFAFA;
+    padding: 7rem 0 7rem 0;
+}
+
+.testimonialContainer h1 {
+    font-size: large;
+
+}
+
+.testimonialWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.testimonialContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.appImageWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.appImage {
+    max-width: 400px;
+}
+
+
+
+
+.testimonialCardContanier {
+    margin-right: 220px;
+}
+
+.testimonialCard {
+    display: flex;
+    border: 1px solid #c1c4e5;
+    box-shadow: 0 8px 2px 0 rgba(56, 77, 105, .1);
+    border-radius: 20px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+}
+
+.testimonialCard:hover {
+    transform: translate(-10px);
+    box-shadow: 2px 8px 2px 3px rgba(56, 77, 105, .1);
+
+}
+
+.starsandflag {
+    display: flex;
+    flex-direction: row;
+    margin-top: 9px;
+    justify-content: space-between;
+}
+
+.countryflag {
+    width: 30px;
+    margin-right: 13px;
+}
+
+.stars {
+    width: 100px;
+    margin-left: 13px;
+}
+
+.testimonialText {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.testimonialLocation {
+    margin-left: 13px;
+    margin-bottom: 9px;
+    color: #496283;
+}
+
+
+@media screen and (max-width :1000px) {
+    .appImageWrapper {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .testimonialCardContanier {
+        margin-right: 10px;
+    }
+
+    .appImage {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width :700px) {
+    .testimonialWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .testimonialCardContanier {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .appImageWrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        overflow: hidden;
+    }
+
+    .appImage {
+        max-width: 100%;
+    }
+
+
+}

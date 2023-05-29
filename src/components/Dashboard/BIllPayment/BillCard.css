@@ -1,0 +1,93 @@
+.BillCard {
+    padding: 20px 24px;
+    background: white;
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.2);
+    border-radius: 15px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.BillCard:hover {
+    transform: translateY(-5px);
+}
+
+.billCardLogo {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.billCardPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.billCardPrice p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    /* padding: 0; */
+    line-height: 0;
+}
+
+.billCardPrice span {
+    font-size: 0.8rem;
+    /* font-weight: 600; */
+    color: #000;
+    padding: 0;
+    line-height: 0;
+}
+
+
+
+.billsCardButton {
+    padding: 0.5rem;
+    background-color: #45DA94;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    white-space: pre;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0.5rem 0 0 0;
+}
+
+.billsCardButton:hover {
+    background-color: #369f6e;
+}
+
+.billCardButtonText {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    padding: 0;
+}
+
+@media screen and (max-width :700px) {
+    .BillCard {
+        width: 30%;
+        padding: 10px 24px;
+    }
+
+    .billCardPrice span {
+        line-height: 1rem;
+    }
+
+    .billCardPrice {
+        margin: 0;
+    }
+}

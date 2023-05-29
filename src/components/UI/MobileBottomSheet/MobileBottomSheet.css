@@ -1,0 +1,14 @@
+.MobileBottomSheetWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 0 1rem;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid rgb(186, 173, 173);
+    height: 60%;
+}

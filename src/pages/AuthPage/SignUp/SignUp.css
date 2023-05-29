@@ -1,0 +1,308 @@
+.signUpContainer {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+.InputLabelWrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+.signUpText {
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    background-color: #111111;
+    box-sizing: border-box;
+    padding: 0 10px 10px 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.authBackIconWrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.authBackIcon {
+    color: white;
+
+}
+
+.authBackIcon:hover {
+    color: #FFEB6B;
+}
+
+.signupdetails h1 {
+    line-height: .85;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 200px;
+    padding: 0;
+}
+
+.signUpHeaderText {
+    display: flex;
+    flex-direction: column;
+}
+
+.signupdetails p {
+    /* line-height: .85; */
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 0;
+}
+
+
+.signUpImage {
+    width: 70%;
+    position: absolute;
+    top: 0;
+}
+
+
+
+.signUpImage2 {
+    width: 30%;
+    transform: rotate(-30deg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.signUpHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.signUpList {
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.signUpInput {
+
+    height: 100vh;
+    width: 100%;
+}
+
+.signUpInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.SignUprowInput {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 10px;
+
+}
+
+.SignUpcolumnInput {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.SignUpinputGroup {
+    width: 333px;
+    height: 50px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    border-radius: 16px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #686868;
+}
+
+.SignUpinputGroup::placeholder {
+    color: #686868;
+}
+
+.signUpError {
+    border: 1px solid red !important;
+}
+
+
+.SignUpinputGroup:focus {
+    outline: none;
+}
+
+
+
+.socialLogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 333px;
+    height: 50px;
+}
+
+.socialLoginIcon {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    border: 1px solid rgb(240, 235, 235);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.googleIcon {
+    color: #ea4335;
+    size: 20;
+}
+
+.appleIcon {
+    color: black;
+    size: 20;
+}
+
+.facebookIcon {
+    color: #3B5998;
+    size: 20;
+}
+
+.socialHover1:hover {
+    background-color: #ea4335;
+}
+
+.socialHover1:hover .googleIcon {
+    color: white;
+}
+
+.socialHover2:hover {
+    background-color: black;
+}
+
+.socialHover2:hover .appleIcon {
+    color: white;
+}
+
+.socialHover3:hover {
+    background-color: #3B5998;
+}
+
+.socialHover3:hover .facebookIcon {
+    color: white;
+}
+
+.signUpButtonWrapper {
+    padding: 20px;
+    text-decoration: none;
+    margin: 10px 0 10px 0;
+}
+
+.signUpButton {
+    border: none;
+    width: 333px;
+    height: 50px;
+    border: 1px solid ridge;
+    border-radius: 10px;
+    background-color: #111111;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpButton:hover {
+    background-color: #1a1a1a;
+}
+
+.oreoluwa {
+    color: #FFEB6B;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width :700px) {
+    .signUpText {
+        display: none;
+    }
+
+    .signUpInput {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: auto !important
+    }
+
+
+    .SignUprowInput {
+
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .SignUpcolumnInput {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signUpHeader {
+        margin: 40px 10px 10px 10px;
+    }
+
+    .SignUpinputGroup {
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        padding: 0 10px 0 10px;
+        border-radius: 16px;
+        margin-bottom: 0.5rem;
+        border: 1px solid #686868;
+    }
+
+    .signUpButtonWrapper {
+        padding: 20px;
+        margin: 10px 0 10px 0;
+    }
+
+    .signUpInputContainer {
+        height: unset;
+    }
+
+    .socialLogin {
+        margin-bottom: 100px;
+    }
+}

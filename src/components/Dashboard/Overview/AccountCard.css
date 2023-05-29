@@ -1,0 +1,126 @@
+.AccountCardWrapper {
+    width: 100%;
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.4);
+    /* border-radius: 15px; */
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 35px; */
+
+}
+
+.AccountCardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.AccountCardHeader {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(113, 113, 113);
+}
+
+.AccountCardHeaderTag {
+    padding: 0 0 1rem 2rem;
+}
+
+.AccountCardHeaderStatus {
+    padding: 0 0 1rem 0;
+}
+
+.tagCopyIcon {
+    color: rgb(130, 130, 130);
+    cursor: pointer;
+}
+
+.tagCopyIcon:hover {
+    color: black;
+}
+
+.AccountCardBalanceWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(96, 95, 95, 0.4);
+    border-radius: 15px;
+}
+
+.AccountCardBalance {
+    display: flex;
+    flex-direction: column;
+}
+
+.AccountCardStatus {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #45DA94;
+    border-radius: 15px;
+    color: white;
+}
+
+.AccountCardBalanceCard {
+    gap: 10px;
+    color: black;
+    display: flex;
+}
+
+.AccountCardContent {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AccountCardBalanceCard span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(12, 12, 12);
+}
+
+
+
+.AccountCardBalanceSavingHeader {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.AccountCardButtons {
+    display: flex;
+    gap: 10px;
+    padding: 1rem 1rem 0 1rem;
+}
+
+@media screen and (max-width :700px) {
+
+    .AccountCardBalanceCard span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(12, 12, 12);
+    }
+
+    .AccountCardBalanceCard {
+        gap: 10px;
+
+    }
+
+    .AccountCardBalanceWrapper {
+        padding: 1rem;
+    }
+
+    .AccountCardHeaderStatus {
+        padding: 0;
+        margin: 0 0 0.5rem 0.5rem
+    }
+
+    .AccountCardHeaderTag {
+        padding: 0;
+        margin: 0 0 0.5rem 0.5rem
+    }
+
+    .AccountCardStatus {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        text-align: center;
+    }
+}

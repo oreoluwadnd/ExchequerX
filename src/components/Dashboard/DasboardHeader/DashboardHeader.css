@@ -1,0 +1,224 @@
+.DashboardHeader {
+    /* position: fixed; */
+    /* width: 100%; */
+    z-index: 99;
+    border-bottom: 1px solid rgb(189, 180, 180);
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.DashboardGreeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.greetingHeader {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 0;
+    margin-top: 0.7rem;
+}
+
+.profileAndDropdown {
+    position: relative;
+}
+
+.notificationAndProfile {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.notificationDiv {
+    background-color: #F9FBFF;
+    border-radius: 100%;
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificationDiv:hover .notificationTooltip {
+    display: flex;
+}
+
+.notificationBadge {
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+
+    width: 10px;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    height: 10px;
+    animation: blinking 1s infinite;
+}
+
+.notificationBadge1 {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    width: 12px;
+    top: 10px;
+    right: 10px;
+    height: 12px;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile:hover .profileDropdown {
+    display: flex;
+}
+
+
+.profileDropdown {
+    position: absolute;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    top: 3.2rem;
+    border: 1px solid rgb(238, 232, 232);
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+    box-shadow: red;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.profileDropdownContent {
+    display: flex;
+    color: rgb(27, 26, 26);
+    padding: 0.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.profileDropdownContent:hover {
+    font-weight: bold;
+}
+
+.notificationTooltip {
+    position: absolute;
+    white-space: pre;
+    font-size: 0.7rem;
+    top: 35px;
+    display: none;
+    border: 10px;
+    background-color: #F9FBFF;
+}
+
+.profileDropdownContent1 {
+    display: flex;
+    padding: 0.5rem;
+    background-color: rgb(250, 126, 126);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.profileDropdownContent1:hover {
+    background-color: red;
+    font-weight: 600;
+}
+
+.profileImage {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.profileName {
+    margin: 0;
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.MobileDashboardHeader {
+    display: none;
+}
+
+@media screen and (max-width :700px) {
+    .DashboardHeader {
+        overflow: hidden;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+
+    .notificationDiv {
+        display: none;
+    }
+
+    .profileImage {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 12px;
+    }
+
+    .dropdownHover {
+        display: none;
+    }
+
+    .profile:hover .profileDropdown {
+        display: none;
+    }
+
+    .greetingHeader {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 0;
+
+    }
+
+    .profileDropdownprofileDropdown {
+        display: none;
+    }
+
+    .MobileHideLogo {
+        display: none;
+    }
+
+
+
+}

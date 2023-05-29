@@ -1,0 +1,175 @@
+.SingleCard {
+    width: 350px;
+    height: 230px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+    perspective: 1000px;
+
+    /* overflow: hidden; */
+}
+
+.singleCardWrapper {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.map-img {
+    width: 100%;
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.singleCardFront {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    left: 0;
+    border-radius: 15px;
+    z-index: 1;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.visa {
+    background: linear-gradient(106.15deg, #3431C2 28.66%, #CD2525 125.37%);
+}
+
+.masterCard {
+    background: linear-gradient(106.15deg, #31C285 6.17%, #254ACD 102.88%)
+}
+
+.singleCardBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    left: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.SingleCard:hover .singleCardWrapper {
+    transform: rotateY(-180deg);
+}
+
+
+.cardNumber {
+    display: flex;
+    padding: 0 1rem 0 1rem;
+    justify-content: space-between;
+
+}
+
+.cardNumber p {
+    font-size: 1.3rem;
+
+}
+
+.chipImage {
+    width: 40px;
+}
+
+.cardTypeLogo {
+    width: 40px;
+}
+
+.cardRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHolder p {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 0;
+}
+
+.cardName p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 0;
+    /* margin-bottom: 10px; */
+}
+
+.Cardbar {
+    background: #222;
+    margin-left: -30px;
+    margin-right: -30px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.CardCvv {
+    background-color: rgb(229, 225, 225);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    gap: 2px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.CardCvvStrike {
+    background-color: rgb(65, 63, 63);
+    width: 80%;
+    height: 5px;
+}
+
+.CardCvvNumber {
+    position: absolute;
+    right: 12px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 0;
+}
+
+.backCardfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backCardtext p {
+    font-size: 0.9rem;
+    line-height: 1;
+    margin: 0;
+    font-style: italic;
+    margin-top: 10px;
+    padding: 0;
+}
+
+
+@media screen and (max-width :700px) {
+
+    .singleCardWrapper {
+        width: 340px
+    }
+}

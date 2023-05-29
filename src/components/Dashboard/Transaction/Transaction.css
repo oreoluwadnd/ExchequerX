@@ -1,0 +1,27 @@
+.TransactionWrapper {
+    display: flex;
+    padding: 2rem 2rem 5rem 2rem;
+    flex-direction: column;
+    height: 100vh;
+    margin-bottom: 13rem;
+}
+
+.TransactionTableWrapper {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.TransactionHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width :700px) {
+    .TransactionWrapper {
+
+        padding: 0rem 0.5rem 3rem 0.5rem;
+    }
+}

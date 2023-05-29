@@ -1,0 +1,37 @@
+.TransactionSearchBarWrapper {
+    position: relative;
+
+    width: fit-content;
+}
+
+.TransactionSearchBarIcon {
+    position: absolute;
+    top: 7px;
+    color: rgb(105, 105, 105);
+    left: 5px;
+}
+
+.TransactionSearchBarInput {
+    padding-left: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width :700px) {
+    .TransactionSearchBarInput {
+        box-sizing: border-box;
+        width: 100%;
+
+    }
+
+    .TransactionSearchBarWrapper {
+        width: 100%;
+    }
+}

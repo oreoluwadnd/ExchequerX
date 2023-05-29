@@ -1,0 +1,13 @@
+.AuthMobileClose {
+    display: none;
+}
+
+@media screen and (max-width :700px) {
+    .AuthMobileClose {
+        display: none;
+    }
+
+    .AuthMobileClose:hover {
+        color: #a09e90;
+    }
+}

@@ -1,0 +1,34 @@
+.BillsPage {
+    display: flex;
+    padding: 2rem 2rem 5rem 2rem;
+    margin-bottom: 10rem;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.DueBillsCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 1rem 0 2rem 0;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.billsCardHeader {
+    /* margin: 0.5rem 1rem 1rem 1rem; */
+}
+
+.BillsPageContent {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width :700px) {
+    .BillsPage {
+        padding: 0rem 0.5rem 45rem 0.5rem;
+        margin-bottom: 20px;
+    }
+}

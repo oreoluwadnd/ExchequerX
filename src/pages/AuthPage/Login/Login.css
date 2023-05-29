@@ -1,0 +1,261 @@
+.LoginContainer {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+.Login {
+    height: 100vh
+}
+
+.LoginText {
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    background-color: #111111;
+    box-sizing: border-box;
+    padding: 0 10px 10px 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.authBackIconWrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.authBackIcon {
+    color: white;
+
+}
+
+.authBackIcon:hover {
+    color: #FFEB6B;
+}
+
+.Logindetails h1 {
+    line-height: .85;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 200px;
+    padding: 0;
+}
+
+
+.Logindetails p {
+    /* line-height: .85; */
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 0;
+}
+
+
+.LoginImage {
+    width: 70%;
+    position: absolute;
+    top: 10px;
+}
+
+
+
+.LoginImage2 {
+    width: 30%;
+    transform: rotate(-30deg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.LoginImage3 {
+    width: 50%;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.LoginHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    justify-content: center;
+}
+
+
+.LoginList {
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.LoginInput {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+.LoginInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.LoginrowInput {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 10px 0;
+}
+
+.columnInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.LogininputGroup {
+    width: 333px;
+    height: 50px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    border-radius: 16px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #686868;
+}
+
+.LoginHeaderText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+.LogininputGroup:focus {
+    outline: none;
+
+}
+
+
+
+.socialLogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 333px;
+    height: 50px;
+}
+
+.socialLoginIcon {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    border: 1px solid rgb(240, 235, 235);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.googleIcon {
+    color: #ea4335;
+    size: 20;
+}
+
+.appleIcon {
+    color: black;
+    size: 20;
+}
+
+.facebookIcon {
+    color: #3B5998;
+    size: 20;
+}
+
+.socialHover1:hover {
+    background-color: #ea4335;
+}
+
+.socialHover1:hover .googleIcon {
+    color: white;
+}
+
+.socialHover2:hover {
+    background-color: black;
+}
+
+.socialHover2:hover .appleIcon {
+    color: white;
+}
+
+.socialHover3:hover {
+    background-color: #3B5998;
+}
+
+.socialHover3:hover .facebookIcon {
+    color: white;
+}
+
+.LoginButtonWrapper {
+    padding: 20px;
+    text-decoration: none;
+    margin: 10px 0 10px 0;
+}
+
+.LoginButton {
+    border: none;
+    width: 333px;
+    height: 50px;
+    border: 1px solid ridge;
+    border-radius: 10px;
+    background-color: #111111;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginButton:hover {
+    background-color: #1a1a1a;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width :700px) {
+    .LoginText {
+        display: none;
+    }
+
+    .LoginInput {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .LoginrowInput {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LogininputGroup {
+        width: 300px
+    }
+}

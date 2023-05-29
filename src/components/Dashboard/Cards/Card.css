@@ -1,0 +1,140 @@
+.cardsWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.cardPage {
+    display: flex;
+    padding: 2rem;
+    margin-bottom: 9rem;
+    /* border: 1px solid red; */
+    flex-direction: column;
+}
+
+.CardPageDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    /* border: 1px solid black; */
+}
+
+
+.addNewCard {
+    width: 350px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    cursor: pointer;
+    color: rgb(145, 145, 145);
+    border: 1px solid rgb(116, 115, 115);
+    font-size: 1.5rem;
+    line-height: 0;
+    background-color: white;
+}
+
+
+
+.CardSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.CardSelectVisa {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    gap: 5px;
+    width: 120px;
+    border: 1px solid rgb(116, 115, 115);
+    background-color: #464cc2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.CardSelectVisa:hover {
+    background-color: #2b319f;
+    outline: #464cc2;
+}
+
+.CardSelectMaster {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border: 1px solid rgb(116, 115, 115);
+    gap: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #303030;
+}
+
+.CardSelectMaster:hover {
+    background-color: black;
+}
+
+.CardSelect {
+    margin: 2rem 0 1rem 1rem;
+}
+
+.addNewCard:hover {
+    color: black;
+}
+
+
+@media screen and (max-width :700px) {
+
+    .cardPage {
+
+        padding: 0rem 0.5rem 3rem 0.5rem;
+
+
+    }
+
+    .cardsWrapper {
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+
+    .cardsWrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .CardPageDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .CardSelect {
+        margin: 1rem 0.2rem 0 0;
+
+        gap: 3px;
+    }
+
+    .CardSelectVisa {
+        padding: 0.2rem 0.2rem 0 0.2rem;
+        gap: 5px;
+        width: 120px;
+    }
+
+    .addNewCard {
+        width: 340px;
+
+    }
+}

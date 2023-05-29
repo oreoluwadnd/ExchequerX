@@ -1,0 +1,147 @@
+.tableHead {
+    background-color: white;
+    text-transform: uppercase;
+    padding-left: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: left;
+    padding-right: 1.25rem;
+}
+
+.tableData {
+    /* text-transform: uppercase; */
+    padding-left: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: left;
+    padding-right: 1.25rem;
+}
+
+.tableHeadRow {
+    border-bottom: 1px solid black;
+}
+
+.tableDataRow {
+    border-bottom: 1px solid #DCDCE9;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.25s ease;
+}
+
+.tableDataRow:hover {
+    /* background-color: #d03232; */
+    transform: translate(-5px);
+    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.4);
+}
+
+.tableWrapper {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(162, 162, 162, 0.2);
+}
+
+.tableDataStatus {
+    border-radius: 15px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+
+    width: fit-content;
+    font-weight: 700;
+    color: white;
+    font-size: small;
+
+
+}
+
+.tableDataAmount {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.tableDataDescription {
+    display: flex;
+    gap: 10px
+}
+
+.tableDataDescriptionDetails {
+    display: flex;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tableDataAmount span {
+    font-size: 1rem;
+    color: red;
+    font-weight: 600;
+}
+
+.tableDataDescriptionInfo {
+    width: fit-content;
+    color: black;
+    margin: 0;
+    font-size: x-small;
+}
+
+.tableDataDescriptionText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.tableDataMedium {
+    border-radius: 15px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    background-color: white;
+    width: fit-content;
+    font-weight: 700;
+    color: black;
+    font-size: small;
+}
+
+.tableDataDescriptionLogo {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #e50914;
+    color: white;
+    width: fit-content;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tableDataDate {
+    font-size: small;
+    color: #000000;
+}
+
+.tableDataDateTime {
+    /* background-color: #45DA94; */
+    padding: 0.5rem 0.5rem;
+    width: fit-content;
+    color: black;
+    border-radius: 15px;
+    font-size: x-small;
+}
+
+.backGroundGreen {
+    background-color: #45DA94;
+}
+
+.backGroundRed {
+    background-color: red;
+}
+
+.backGroundYellow {
+    background-color: orange;
+}
+
+@media screen and (max-width :700px) {
+    .hideTable {
+        display: none;
+    }
+}

@@ -1,0 +1,198 @@
+.OTPContainer {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+.OTP {
+    height: 100vh
+}
+
+.OTPText {
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    background-color: #111111;
+    box-sizing: border-box;
+    padding: 0 10px 10px 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.OTPHeaderText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.authBackIconWrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.authBackIcon {
+    color: white;
+
+}
+
+.authBackIcon:hover {
+    color: #FFEB6B;
+}
+
+.OTPdetails h1 {
+    line-height: .85;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 200px;
+    padding: 0;
+}
+
+
+.OTPdetails p {
+    /* line-height: .85; */
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 0;
+}
+
+
+.OTPImage {
+    width: 70%;
+    position: absolute;
+    top: 10px;
+}
+
+
+
+.optImage2 {
+    width: 30%;
+    transform: rotate(-30deg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.OTPHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    justify-content: center;
+}
+
+
+.OTPList {
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.OTPInput {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+.OTPInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.rowInput {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* margin: 15px 10px 10px 0; */
+}
+
+.columnInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.OtpinputGroup {
+    width: 333px;
+    height: 50px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    border-radius: 16px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #686868;
+}
+
+
+.inputGroup:focus {
+    outline: none;
+
+}
+
+
+
+
+
+.OTPButtonWrapper {
+    text-decoration: none;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+}
+
+.OTPButton {
+    border: none;
+    width: 333px;
+    height: 50px;
+    border: 1px solid ridge;
+    border-radius: 10px;
+    background-color: #111111;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OTPButton:hover {
+    background-color: #1a1a1a;
+}
+
+.cursor {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width :700px) {
+    .OTPText {
+        display: none;
+    }
+
+    .OTPHeader {
+        margin: 0 5px 10px 5px;
+        text-align: center;
+    }
+
+    .OTPInput {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .OtpinputGroup {
+        width: 300px;
+    }
+}

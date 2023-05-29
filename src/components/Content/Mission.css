@@ -1,0 +1,49 @@
+.mission {
+    background-color: #FAFAFA;
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.missionContainer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 9% 40px 9%;
+}
+
+.missionImage {
+    width: 50px;
+    padding-top: 100px;
+    height: 50px;
+}
+
+@media screen and (max-width :1000px) {
+    .missionContainer {
+        padding: 0 5% 40px 5%;
+    }
+}
+
+@media screen and (max-width :700px) {
+    .mission {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .missionContainer {
+        padding: 10px 10px 10px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mission {
+        background-color: #FAFAFA;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+}

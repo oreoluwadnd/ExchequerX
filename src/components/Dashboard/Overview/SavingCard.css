@@ -1,0 +1,76 @@
+.SavingCardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 0.5rem rgba(96, 95, 95, 0.4);
+}
+
+
+.SavingCardWrapper:hover {
+    box-shadow: 0 0 0.5rem rgba(1, 1, 1, 0.4);
+}
+
+.SavingCardWrapperIconWrapper {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+}
+
+.SavingCardWrapperAmount {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-radius: 15px;
+    /* padding: 0.1rem; */
+    width: 100%;
+    cursor: pointer;
+
+}
+
+.SavingCardWrapperAmount:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.SavingCardWrapperAmount span {
+    line-height: 0;
+    margin: 0;
+}
+
+.SavingCardText {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.SavingCardDetails {
+    margin: 0.5rem;
+}
+
+@media screen and (max-width :700px) {
+
+    .SavingCardWrapper {
+
+        box-shadow: unset;
+    }
+
+    .SavingCardWrapperIconWrapper {
+
+        padding: 4rem;
+
+    }
+}

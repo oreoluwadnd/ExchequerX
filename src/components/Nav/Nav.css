@@ -1,0 +1,275 @@
+/* //Gobal style */
+.flexRow {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.displaynone {
+    display: none;
+}
+
+/* //Gobal style */
+
+.NavContainer {
+    padding: 10px 100px 10px 100px;
+}
+
+.Navlinks {
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: 4rem
+}
+
+.navlinktext {
+    font-size: 15px;
+    font-weight: 300;
+    transition: font-weight 250ms ease-in-out;
+}
+
+.navlinktext:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 2px rgb(115, 110, 110);
+    font-weight: 500;
+}
+
+
+.logo {
+    height: 27px;
+    display: block;
+    width: 100px;
+}
+
+.authButton {
+    position: relative;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.authButtonLogin {
+    text-decoration: none;
+    color: black;
+    transition: 250ms ease-in-out;
+}
+
+.authButtonLogin:hover {
+    text-decoration: 5px solid underline #45DA94
+}
+
+.getStartedButton {
+    position: relative;
+    border: 2px solid black;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    /* transition-duration: 5s; */
+    padding: 10px 40px 10px 10px;
+}
+
+.getStartedButton:hover {
+    border: 2px solid #45DA94;
+    color: #45DA94;
+}
+
+.movingArrow {
+    position: relative;
+    bottom: 10px;
+    transition-duration: 10s;
+}
+
+.movingArrow1 {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+    transition-timing-function: ease-in-out;
+
+}
+
+.movingArrow2 {
+    position: absolute;
+    margin-left: 10px;
+    transition: 0.5s;
+
+    transition-timing-function: ease-in-out;
+}
+
+.getStartedButton:hover .movingArrow1 {
+    opacity: 1;
+    color: #45DA94;
+    margin-left: 10px;
+}
+
+.getStartedButton:hover .movingArrow2 {
+    opacity: 0;
+    color: #45DA94;
+    margin-left: 20px;
+}
+
+.hambuger {
+    display: none;
+}
+
+@media screen and (max-width :1000px) {
+    .NavContainer {
+        padding: 10px 12px 10px 12px;
+    }
+
+    .Navlinks {
+        font-weight: 600;
+        gap: 1.5rem
+    }
+
+    .authButton {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width :700px) {
+    .hambuger {
+        display: block;
+    }
+
+    .NavContainer {
+        padding: 10px;
+    }
+
+    .mobileDisplay {
+        display: none;
+    }
+
+    .wrapperOpen {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(15px);
+        z-index: 100;
+        animation: navAmine 0.4s ease-in-out;
+    }
+
+    @keyframes navAmine {
+        0% {
+            clip-path: circle(10px at calc(100% - 25px) 26px);
+            background-color: white;
+        }
+
+        100% {
+            clip-path: circle(100%);
+
+        }
+    }
+
+    .mobileNavContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 10px 5px 10px;
+    }
+
+    .mobileNavIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .icon-mmovement {
+        animation: iconMovement 0.5s ease-in-out;
+        /* rotate the icon when it loads */
+    }
+
+    @keyframes iconMovement {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    .Navtext {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: -.04em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navCard {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .navCard img {
+        width: 10rem;
+        object-fit: cover;
+        border-radius: 20px;
+
+    }
+
+    .navCardDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .navBarDetailsText {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -.04em;
+
+    }
+
+    .mobileNavText {
+        font-size: 0.8rem;
+    }
+
+    .navButtonContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1px;
+    }
+
+    .mobileNavButton {
+        width: 50%;
+        background-color: black;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        color: white;
+        text-decoration: none;
+    }
+}

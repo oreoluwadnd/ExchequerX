@@ -1,0 +1,257 @@
+.page-details {
+    padding: 10px 0 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.videoContainer {
+    width: 60%;
+    /* height: 100%; */
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.videoImage {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    width: 90px;
+    height: 100px;
+    z-index: 5;
+    object-fit: contain;
+}
+
+.videoImage1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 300px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.videoImage2 {
+    position: absolute;
+    top: 100px;
+    left: 53px;
+    width: 40px;
+    height: 50px;
+    object-fit: contain;
+    z-index: 1;
+    transform: rotate(40deg);
+    animation: lock 0.4s linear infinite;
+}
+
+@keyframes lock {
+    0% {
+        transform: rotate(40deg);
+    }
+
+    50% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(40deg);
+    }
+
+}
+
+.pageVideo {
+    margin-top: 60px;
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.pageDetailsText {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pageDetailsChecks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.pageDetailsChecks p {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.pageDetailsChecks img {
+    width: 15px;
+    height: 15px
+}
+
+.pageDetailsTitle h1 {
+    font-size: 6rem;
+    line-height: 1.2;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+.detailsButton {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    text-decoration: none;
+}
+
+.detailsButton span {
+    font-size: 15px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2DE38E;
+    color: white;
+    cursor: pointer;
+}
+
+.detailsButton span:hover {
+    background-color: #0c9055;
+}
+
+@media screen and (max-width :1000px) {
+    .page-details {
+        padding: 10px 0 30px 20px;
+    }
+
+    .pageDetailsTitle h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-top: 50px;
+        text-transform: capitalize;
+    }
+
+    .videoContainer {
+
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .pageVideo {
+        margin-top: 50px;
+        min-width: 400px;
+    }
+
+    .videoImage {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        width: 40px;
+        height: 60px;
+        z-index: 5;
+        object-fit: contain;
+    }
+
+    .videoImage1 {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 70px;
+
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    .videoImage2 {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        width: 15px;
+        height: 50px;
+        object-fit: contain;
+        z-index: 1;
+        transform: rotate(40deg);
+    }
+
+}
+
+@media screen and (max-width :700px) {
+    .page-details {
+        padding: 10px 0 30px 10px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .detailsButton {
+        margin: 3rem 0 0.5rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pageDetailsTitle h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-top: 50px;
+        text-transform: capitalize;
+    }
+
+    .pageDetailsChecks p {
+        font-size: x-small;
+        margin-left: 10px;
+    }
+
+    .videoContainer {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .pageVideo {
+        margin-top: 70px;
+        max-width: auto;
+    }
+
+
+    .videoImage {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        width: 60px;
+        height: 100px;
+        z-index: 5;
+        object-fit: contain;
+    }
+
+    .videoImage1 {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 100px;
+        height: 300px;
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    .videoImage2 {
+        position: absolute;
+        top: 100px;
+        left: 65px;
+        width: 20px;
+        height: 50px;
+        object-fit: contain;
+        z-index: 1;
+        transform: rotate(40deg);
+    }
+}
