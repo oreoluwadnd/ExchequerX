@@ -1,12 +1,12 @@
 import React from "react";
-import "./SavingsMoneyModal.css";
+import "./CardTopUp.css";
 import { BiGift } from "react-icons/bi";
 import { RiMastercardFill, RiVisaFill } from "react-icons/ri";
 
 const CardTopUp = () => {
   return (
-    <div className="SavingsMoneyModalWrapper">
-      <div className="SavingsMoneyHeader">
+    <div className="CardTopUpModalWrapper">
+      <div className="CardTopUpHeader">
         <div>
           <h2>Fund your card easily</h2>
         </div>

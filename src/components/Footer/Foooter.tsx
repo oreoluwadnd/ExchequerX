@@ -11,12 +11,11 @@ const Footer: React.FC = () => {
     <footer className="footerContainer">
       <div className="footerhead">
         <div className="footerLogo">
-          <div></div>
-          <img
+          {/* <img
             src="https://global-uploads.webflow.com/63c81b0c3ad929013f062d70/63c81b0c3ad929a04e062dde_chipper-logo-white.svg"
             loading="lazy"
             alt=""
-          />
+          /> */}
         </div>
         <div>
           <h4>How Can We help?</h4>
@@ -37,13 +36,13 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="socialLinks">
-          <a href="https://www.facebook.com/ExchequerSoftware/">
+          <a href="https://github.com/oreoluwadnd/ExchequerX" target="_blank">
             <FaGithubSquare size={25} color="white" />
           </a>
-          <a href="https://www.facebook.com/ExchequerSoftware/">
-            <FaExternalLinkSquareAlt size={25} color="white" />
+          <a href="">
+            <FaExternalLinkSquareAlt size={25} color="white" target="_blank" />
           </a>
-          <a href="https://www.facebook.com/ExchequerSoftware/">
+          <a href="https://www.twitter.com/oreoluwadnd" target="_blank">
             <FaTwitterSquare size={25} color="white" />
           </a>
         </div>

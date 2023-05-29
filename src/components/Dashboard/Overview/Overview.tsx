@@ -51,7 +51,11 @@ const Overview: React.FC = () => {
         </Modal>
       )} */}
 
-      {mobileBottomSheet && <CardTopUp />}
+      {/* {mobileBottomSheet && (
+        <Modal>
+          <CardTopUp />
+        </Modal>
+      )} */}
 
       <div className="OverviewPage" onClick={handlesetMobileBottomSheet}>
         <PageHeader title={"Overview"} icon={MdAccountBalance} />

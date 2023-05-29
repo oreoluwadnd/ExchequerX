@@ -1,14 +1,11 @@
 .SendMoneyModalWrapper {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 40%;
     background-color: white;
     z-index: 999;
     padding: 0 1rem;
     overflow: hidden;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 15px;
     border: 2px solid rgb(186, 173, 173);
     height: 60%;
     display: flex;
@@ -52,4 +49,16 @@
     border-radius: 16px;
     margin: 5px 0 5px 0;
     border: 1px solid #686868;
+}
+
+@media screen and (max-width :700px) {
+    .SendMoneyModalWrapper {
+        width: unset;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: unset;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
 }

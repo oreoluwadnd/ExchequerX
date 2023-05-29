@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const backendUrl = "http://" + window.location.hostname + ":5000/api/v1/";
+// const backendUrl = "http://" + window.location.hostname + ":5000/api/v1/";
+const backendUrl = "https://exchequer.onrender.com/api/v1/";
 
 export const SignUpApi = createAsyncThunk(
   "users/signUp",
