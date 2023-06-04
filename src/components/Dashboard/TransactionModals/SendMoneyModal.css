@@ -1,6 +1,6 @@
 .SendMoneyModalWrapper {
     position: fixed;
-    width: 40%;
+    width: 30%;
     background-color: white;
     z-index: 999;
     padding: 0 1rem;
@@ -21,14 +21,38 @@
     box-sizing: border-box;
     background-color: #45DA94;
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
+}
+
+.SendMoneyModalClose {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: red;
+    border-radius: 15px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+}
+
+.SendMoneyModalClose:hover {
+    background-color: rgb(143, 15, 15);
 }
 
 
 .SendMoneyModalButton:hover {
     background-color: #24935f;
+}
+
+.SendMoneyModalButtonGroup {
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
 .SendMoneyHeader {

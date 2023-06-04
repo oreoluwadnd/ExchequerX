@@ -1,3 +1,5 @@
+import { setSavingsMoneyModal } from "../../../features/modal/modalsSlice";
+import { useAppDispatch, RootState } from "../../../features/store";
 import {
   HiArrowDownOnSquareStack,
   HiArrowUpOnSquareStack,
@@ -15,6 +17,11 @@ const SavingTiles: React.FC<SavingTilesProps> = ({
   SavingTilesTitle,
   SavingTilesAmount,
 }) => {
+  const dispatch = useAppDispatch();
+  const handleModal = () => {
+    return dispatch(setSavingsMoneyModal());
+  };
+
   return (
     <div className="SavingTilesWrapper">
       <div className="SavingTilesText">
@@ -23,13 +30,13 @@ const SavingTiles: React.FC<SavingTilesProps> = ({
       </div>
 
       <div className="SavingTilesIcon">
-        <div className="SavingTilesIconWrapper">
+        <div className="SavingTilesIconWrapper" onClick={handleModal}>
           <IoIosLock size={25} />
         </div>
-        <div className="SavingTilesIconWrapper">
+        <div className="SavingTilesIconWrapper" onClick={handleModal}>
           <HiArrowUpOnSquareStack size={25} />
         </div>
-        <div className="SavingTilesIconWrapper">
+        <div className="SavingTilesIconWrapper" onClick={handleModal}>
           <HiArrowDownOnSquareStack size={25} />
         </div>
       </div>

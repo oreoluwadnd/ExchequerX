@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ResetPassword.css";
 import AuthMobileClose from "../AuthClose/AuthMobileClose";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 const ResetPassword: React.FC = () => {
   return (
@@ -10,10 +9,6 @@ const ResetPassword: React.FC = () => {
       <div className="resetPasswordContainer">
         <AuthMobileClose />
         <div className="resetPasswordText">
-          <div className="authBackIconWrapper">
-            <BsFillArrowLeftSquareFill className="authBackIcon" />
-          </div>
-
           <img
             src="https://images.ctfassets.net/ss5kfr270og3/6L9nYTVnIW8QiYExxtszMD/739dcad4e06032f09a460f490581785b/global-verification-illustration.png?fm=webp&q=70"
             className="resetPasswordImage"

@@ -1,9 +1,16 @@
 import React from "react";
 import "./RequestMoneyModal.css";
+import { setrequestModal } from "../../../features/modal/modalsSlice";
+import { useAppDispatch, RootState } from "../../../features/store";
 
 interface SendMoneyModalProps {}
 
 const RequestMoneyModal = () => {
+  const dispatch = useAppDispatch();
+
+  const handleModal = () => {
+    return dispatch(setrequestModal());
+  };
   return (
     <div className="RequestMoneyModalWrapper">
       <div className="RequestMoneyHeader">
@@ -24,8 +31,13 @@ const RequestMoneyModal = () => {
         <input className="RequestMoneyInput" type="number" />
       </div>
 
-      <div className="RequestMoneyModalButton">
-        <div>Request</div>
+      <div className="RequestMoneyModalButtonGroup">
+        <div className="RequestMoneyModalClose" onClick={handleModal}>
+          <div>CANCEL</div>
+        </div>
+        <div className="RequestMoneyModalButton">
+          <div>Request</div>
+        </div>
       </div>
     </div>
   );

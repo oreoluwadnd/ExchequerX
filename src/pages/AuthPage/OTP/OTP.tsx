@@ -5,7 +5,7 @@ import Modal from "../../../components/UI/Modal/Modal";
 import Loader from "../../../components/UI/Loader/Loader";
 import OtpModal from "./OtpModal";
 import { VerifyOtpApi } from "../../../features/auth/authApi";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+
 import AuthMobileClose from "../AuthClose/AuthMobileClose";
 import { useForm } from "../../../hooks/useForm";
 import { useAppDispatch, RootState } from "../../../features/store";
@@ -68,10 +68,6 @@ const OTP: React.FC = () => {
       <div className="OTPContainer">
         <AuthMobileClose />
         <div className="OTPText">
-          <div className="authBackIconWrapper">
-            <BsFillArrowLeftSquareFill className="authBackIcon" />
-          </div>
-
           <img
             src="https://images.ctfassets.net/ss5kfr270og3/2FoQrOzY1njtuBeLTC4hwD/319f5788d85beba2f59c76a079855203/two_risk_scores_2x.png?fm=webp&q=70"
             className="OTPImage"

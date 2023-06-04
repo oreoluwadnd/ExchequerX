@@ -1,6 +1,6 @@
 .CardTopUpModalWrapper {
     position: fixed;
-    width: 40%;
+    width: 30%;
     background-color: white;
     z-index: 999;
     padding: 0 1rem;
@@ -14,16 +14,44 @@
     align-items: center;
 }
 
-.SavingsMoneyModalButton {
+.CardTopUpModalButton {
     width: 100%;
     padding: 1rem;
     text-align: center;
     box-sizing: border-box;
     background-color: #45DA94;
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
+}
+
+.CardTopUpModalButton:hover {
+    background-color: #24935f;
+}
+
+.CardTopUpModalButtonGroup {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.CardTopUpModalClose {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: red;
+    border-radius: 15px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+}
+
+.CardTopUpModalClose:hover {
+    background-color: rgb(143, 15, 15);
 }
 
 
@@ -44,31 +72,27 @@
 }
 
 .SavingsMoneyDropdown {
-    display: none;
+    display: block;
     position: absolute;
     background-color: #f9f9f9;
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 80px;
-    /* border: 1px solid blue; */
 }
 
-.SavingsMoneyDropDownWrapper:hover .SavingsMoneyDropdown {
-    display: block
-}
 
-.SavingsMoneyDropDownContainer:hover .SavingsMoneyDropdown {
-    display: block
-}
+
+
 
 .SavingsMoneyDropDownWrapper {
     width: 300px;
     height: 50px;
     font-size: 16px;
-    padding: 0 10px 0 10px;
-    /* border-radius: 16px; */
+    /* padding: 0 10px 0 10px; */
+    cursor: pointer;
     margin: 5px 0 5px 0;
+    align-items: center;
     border: 1px solid #686868;
 }
 
@@ -79,8 +103,13 @@
     justify-content: flex-start;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
     padding: 0.5rem;
     border-bottom: 1px solid rgb(193, 191, 191);
+}
+
+.SavingsMoneyDropdownItem:hover {
+    background-color: rgba(216, 216, 216, 0.565);
 }
 
 .SavingsMoneyDropdownItemText {

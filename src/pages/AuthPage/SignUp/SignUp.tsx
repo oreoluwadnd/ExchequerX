@@ -4,7 +4,7 @@ import "./SignUp.css";
 import { Link } from "react-router-dom";
 import { SignUpApi } from "../../../features/auth/authApi";
 import { useAppDispatch, RootState } from "../../../features/store";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineGoogle, AiFillApple, AiFillFacebook } from "react-icons/ai";
 import AuthMobileClose from "../AuthClose/AuthMobileClose";
@@ -160,10 +160,6 @@ const SignUp: React.FC = () => {
         <div className="signUpContainer">
           <AuthMobileClose />
           <div className="signUpText">
-            <div className="authBackIconWrapper">
-              <BsFillArrowLeftSquareFill className="authBackIcon" />
-            </div>
-
             <img
               src="https://images.ctfassets.net/ss5kfr270og3/1ZZuqLEhx3AmXsaiNqo7Fq/4e191b00ac3f6101d34e87491053ec70/Mission-IMG.png?fm=webp&q=70"
               className="signUpImage"

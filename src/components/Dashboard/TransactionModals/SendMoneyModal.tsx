@@ -1,11 +1,18 @@
 import React from "react";
 import "./SendMoneyModal.css";
+import { setSendMoney } from "../../../features/modal/modalsSlice";
+import { useAppDispatch, RootState } from "../../../features/store";
 
 interface SendMoneyModalProps {
   children?: React.ReactNode;
 }
 
 const SendMoneyModal: React.FC<SendMoneyModalProps> = ({ children }) => {
+  const dispatch = useAppDispatch();
+
+  const handleModal = () => {
+    return dispatch(setSendMoney());
+  };
   return (
     <div className="SendMoneyModalWrapper">
       <div className="SavingsMoneyHeader">
@@ -26,8 +33,13 @@ const SendMoneyModal: React.FC<SendMoneyModalProps> = ({ children }) => {
         <input className="SendMoneyInput" type="number" />
       </div>
 
-      <div className="SendMoneyModalButton">
-        <div>SEND</div>
+      <div className="SendMoneyModalButtonGroup">
+        <div className="SendMoneyModalClose" onClick={handleModal}>
+          <div>CANCEL</div>
+        </div>
+        <div className="SendMoneyModalButton">
+          <div>SEND</div>
+        </div>
       </div>
     </div>
   );

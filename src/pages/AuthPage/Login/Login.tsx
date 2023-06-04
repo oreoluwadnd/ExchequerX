@@ -8,7 +8,7 @@ import Modal from "../../../components/UI/Modal/Modal";
 import Loader from "../../../components/UI/Loader/Loader";
 import { useForm } from "../../../hooks/useForm";
 import InputErrorLabel from "../../../components/UI/InputErrorLabel/InputErrorLabel";
-import { BsFillArrowLeftSquareFill, BsFillBellFill } from "react-icons/bs";
+import { BsFillBellFill } from "react-icons/bs";
 import { AiOutlineGoogle, AiFillApple, AiFillFacebook } from "react-icons/ai";
 import AuthMobileClose from "../AuthClose/AuthMobileClose";
 
@@ -89,10 +89,6 @@ const Login: React.FC = () => {
       <div className="LoginContainer">
         <AuthMobileClose />
         <div className="LoginText">
-          <div className="authBackIconWrapper">
-            <BsFillArrowLeftSquareFill className="authBackIcon" />
-          </div>
-
           <img
             src="https://images.ctfassets.net/ss5kfr270og3/46nXvKdmuwtz1QxynCJhAx/d052b4dbcf0c40b4f7524cfdfe3de7ce/Career-Header-globe-IMG.png?fm=webp&q=70"
             className="LoginImage"

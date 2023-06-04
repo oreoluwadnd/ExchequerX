@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../features/store";
 import SideBar from "../SideBar/SideBar";
 import OverviewPage from "./OverviewCard";
 import Modal from "../../UI/Modal/Modal";
@@ -12,10 +14,7 @@ import { GiWallet } from "react-icons/gi";
 import { TbTargetArrow } from "react-icons/tb";
 import { BsSend, BsApple } from "react-icons/bs";
 import { TbPigMoney } from "react-icons/tb";
-import Notifications from "../../UI/Notifications/Notifications";
-import { BiLock, BiTargetLock } from "react-icons/bi";
 import { GiReceiveMoney } from "react-icons/gi";
-import { ImTarget } from "react-icons/im";
 import { SiVisa, SiMastercard } from "react-icons/si";
 import "./Overview.css";
 import SendCard from "./SendCard";
@@ -25,39 +24,41 @@ import SendMoneyModal from "../TransactionModals/SendMoneyModal";
 import RequestMoneyModal from "../TransactionModals/RequestMoneyModal";
 import SavingsMoneyModal from "../TransactionModals/SavingsMoneyModal";
 const Overview: React.FC = () => {
-  const [mobileBottomSheet, setMobileBottomSheet] = useState(false);
   const [floatingButton, setfloatingButton] = useState(false);
   const handleFloatingButton = () => {
     setfloatingButton(!floatingButton);
   };
-  const handlesetMobileBottomSheet = () => {
-    setMobileBottomSheet(!mobileBottomSheet);
-  };
+  const { sendModal, requestModal, savingsModal, CardTopUpModal } = useSelector(
+    (state: RootState) => state.modals
+  );
+  // const handlesetMobileBottomSheet = () => {
+  //   setMobileBottomSheet(!mobileBottomSheet);
+  // };
   return (
     <SideBar>
-      {/* {mobileBottomSheet && (
+      {sendModal && (
         <Modal>
           <SendMoneyModal />
         </Modal>
-      )} */}
-      {/* {mobileBottomSheet && (
+      )}
+      {requestModal && (
         <Modal>
           <RequestMoneyModal />
         </Modal>
-      )} */}
-      {/* {mobileBottomSheet && (
+      )}
+      {savingsModal && (
         <Modal>
           <SavingsMoneyModal />
         </Modal>
-      )} */}
+      )}
 
-      {/* {mobileBottomSheet && (
+      {CardTopUpModal && (
         <Modal>
           <CardTopUp />
         </Modal>
-      )} */}
+      )}
 
-      <div className="OverviewPage" onClick={handlesetMobileBottomSheet}>
+      <div className="OverviewPage">
         <PageHeader title={"Overview"} icon={MdAccountBalance} />
         <div className="OverviewPageCard">
           <OverviewPage
