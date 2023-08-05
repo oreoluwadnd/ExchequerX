@@ -10,7 +10,7 @@ const TransactionSearchBar: React.FC = () => {
         placeholder="Search Transaction"
         className="TransactionSearchBarInput"
       />
-      <FaSearchDollar className="TransactionSearchBarIcon" size={20} />
+      {/* <FaSearchDollar className="TransactionSearchBarIcon" size={20} /> */}
     </div>
   );
 };

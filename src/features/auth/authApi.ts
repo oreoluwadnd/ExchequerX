@@ -9,7 +9,6 @@ export const SignUpApi = createAsyncThunk(
   async (data: ISignUp, thunkAPI) => {
     try {
       const response = await axios.post(backendUrl + "users/signUp", data);
-      localStorage.setItem("email", response.data.data.user);
       return response.data.data;
     } catch (error: any) {
       console.log(error.response.data.message);
@@ -24,10 +23,16 @@ export const VerifyOtpApi = createAsyncThunk(
     const email = localStorage.getItem("email");
     const { otp } = data;
     try {
-      const response = await axios.post(backendUrl + "users/verifyOtp", {
-        otp,
-        email,
-      });
+      const response = await axios.post(
+        backendUrl + "users/verifyOtp",
+        {
+          otp,
+          email,
+        },
+        {
+          withCredentials: true,
+        }
+      );
       return response.data.data;
     } catch (error: any) {
       console.log(error.response.data.message);
@@ -44,6 +49,71 @@ export const LoginApi = createAsyncThunk(
         withCredentials: true,
       });
       return response.data;
+    } catch (error: any) {
+      console.log(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+
+export const AutheticateApi = createAsyncThunk(
+  "users/getMe",
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get(backendUrl + "users/getMe", {
+        withCredentials: true,
+      });
+
+      return response.data.data;
+    } catch (error: any) {
+      console.log(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+
+export const logoutApi = createAsyncThunk(
+  "users/logout",
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get(backendUrl + "users/logout", {
+        withCredentials: true,
+      });
+      return response.data.data;
+    } catch (error: any) {
+      console.log(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+export const updateUserApi = createAsyncThunk(
+  "users/updateUser",
+  async (data, thunkAPI) => {
+    try {
+      const response = await axios.patch(
+        backendUrl + "users/updateUser",
+        data,
+        {
+          withCredentials: true,
+        }
+      );
+
+      return response.data.data;
+    } catch (error: any) {
+      console.log(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+export const deleteUserApi = createAsyncThunk(
+  "users/deleteUser",
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get(backendUrl + "users/deleteUser", {
+        withCredentials: true,
+      });
+
+      return response.data.data;
     } catch (error: any) {
       console.log(error.response.data.message);
       return thunkAPI.rejectWithValue(error.response.data.message);

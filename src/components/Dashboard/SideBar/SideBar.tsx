@@ -47,13 +47,13 @@ const SideBar: React.FC<LayoutProps> = ({ children }) => {
             <RiMenu4Line size={26} onClick={toggleOpen} cursor={"pointer"} />
           </div>
         </div>
-        <div className="sideBarLogo ">
+        {/* <div className="sideBarLogo ">
           <img
             alt="logo"
             src="https://res.cloudinary.com/aore/image/upload/v1681901313/byozwrerazxkbhmd4bta.png"
             className="sideBarLogoImg"
           />
-        </div>
+        </div> */}
         <div>
           <div className={sideBarOpen ? "sideBarLink" : "sideBarLinkClose"}>
             {menus?.map((menu, i) => (

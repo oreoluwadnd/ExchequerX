@@ -1,13 +1,11 @@
 .RequestMoneyModalWrapper {
     position: fixed;
-    width: 30%;
     background-color: white;
     z-index: 999;
     padding: 0 1rem;
     overflow: hidden;
     border-radius: 15px;
     border: 2px solid rgb(186, 173, 173);
-    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +23,7 @@
     text-transform: uppercase;
     cursor: pointer;
     color: white;
+    border: none;
 }
 
 .RequestMoneyModalClose {

@@ -9,6 +9,7 @@ import Overview from "./components/Dashboard/Overview/Overview";
 import Card from "./components/Dashboard/Cards/Card";
 import Settings from "./components/Dashboard/Settings/Settings";
 import Bills from "./components/Dashboard/BIllPayment/BIlls";
+import UseAuth from "./hooks/useAuth";
 import Transaction from "./components/Dashboard/Transaction/Transaction";
 
 function App() {
@@ -21,12 +22,49 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/otp" element={<OTP />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
-          <Route path="/overview" element={<Overview />} />
+
+          <Route
+            path="/overview"
+            element={
+              <UseAuth>
+                <Overview />
+              </UseAuth>
+            }
+          />
           <Route path="/cards" element={<Card />} />
-          <Route path="/bills" element={<Bills />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/dashboard" element={<Overview />} />
-          <Route path="/transaction" element={<Transaction />} />
+          <Route
+            path="/bills"
+            element={
+              <UseAuth>
+                <Bills />
+              </UseAuth>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <UseAuth>
+                <Settings />
+              </UseAuth>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <UseAuth>
+                <Overview />
+              </UseAuth>
+            }
+          />
+          <Route
+            path="/transaction"
+            element={
+              <UseAuth>
+                <Transaction />
+              </UseAuth>
+            }
+          />
+
           <Route path="*" element={<p> NOT FOUND</p>} />
         </Routes>
       </BrowserRouter>

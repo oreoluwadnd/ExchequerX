@@ -1,11 +1,20 @@
 .testimonialContainer {
-    background-color: #FAFAFA;
-    padding: 7rem 0 7rem 0;
+    max-width: 900px;
+    padding: 3rem;
+    width: 100%;
+
 }
 
 .testimonialContainer h1 {
     font-size: large;
 
+}
+
+.testimonialContainerWrapper {
+
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
 }
 
 .testimonialWrapper {
@@ -22,11 +31,11 @@
 
 
 .appImageWrapper {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+
 }
 
 
@@ -37,9 +46,7 @@
 
 
 
-.testimonialCardContanier {
-    margin-right: 220px;
-}
+
 
 .testimonialCard {
     display: flex;

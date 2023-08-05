@@ -14,15 +14,11 @@
 }
 
 
-.SavingCardWrapper:hover {
-    box-shadow: 0 0 0.5rem rgba(1, 1, 1, 0.4);
-}
-
 .SavingCardWrapperIconWrapper {
     display: flex;
     color: white;
     background-color: black;
-    padding: 0.5rem;
+    padding: 4rem;
     justify-content: center;
     align-items: center;
     border-radius: 15px;

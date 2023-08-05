@@ -96,12 +96,11 @@
     align-items: center;
     gap: 0.3rem;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
     position: relative;
 }
 
-.profile:hover .profileDropdown {
-    display: flex;
-}
 
 
 .profileDropdown {

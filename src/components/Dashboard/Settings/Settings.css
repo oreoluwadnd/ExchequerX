@@ -177,6 +177,7 @@
     font-weight: bold;
     cursor: pointer;
     gap: 0.5rem;
+    border: none;
 }
 
 .settingsInputSave:hover {

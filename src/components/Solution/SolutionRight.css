@@ -3,15 +3,23 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #111111;
-    padding: 6rem 1rem 6rem 1rem;
+    padding: 7rem 1rem 7rem 1rem;
+    width: 100%;
+    max-width: 900px;
+
 }
 
-.solutionRightImgDiv {
-    margin-left: 300px;
+.solutionRightWrapper {
+    display: flex;
+    background-color: #111111;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .solutionRightImg {
+
     max-width: 352px;
 }
 
@@ -19,14 +27,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-right: 200px;
-    margin-left: 100px;
     color: white;
 }
 
 .solutionRightText h2 {
     font-size: 2.25rem;
-    line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -.035rem;
@@ -34,10 +39,9 @@
 
 .solutionRightText p {
     font-size: 1.25rem;
-    letter-spacing: -.035rem;
 }
 
-@media screen and (max-width :1000px) {
+/* @media screen and (max-width :1000px) {
     .solutionRightText {
         display: flex;
         justify-content: center;
@@ -63,7 +67,7 @@
         position: relative;
     }
 
-}
+} */
 
 @media screen and (max-width :700px) {
     .solutionRight {

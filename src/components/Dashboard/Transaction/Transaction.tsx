@@ -1,8 +1,11 @@
 import "./Transaction.css";
-import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../features/store";
+import React, { useState, useEffect } from "react";
 import SideBar from "../SideBar/SideBar";
 import PageHeader from "../../UI/PageHeader/PageHeader";
 import { BiTransfer } from "react-icons/bi";
+import Noresult from "../../UI/Noresult/Noresult";
 import {
   RiNetflixFill,
   RiSpotifyFill,
@@ -13,74 +16,26 @@ import TransactionSearchBar from "./TrasactionSearchBar";
 
 import Table from "../../UI/Table/Table";
 const Transaction: React.FC = () => {
-  const tableData: any = [
-    {
-      refrenceId: "#124567767",
-      description: "NETFLIX",
-      icon: RiNetflixFill,
-      amount: "- $3000",
-      date: "12/12/2023",
-      time: "12:00 PM",
-      medium: "CARD",
-      info: "1 month subscription",
-      status: "SUCCESS",
-    },
-    {
-      refrenceId: "#124567767",
-      description: "SPOTIFY",
-      icon: RiSpotifyFill,
-      color: "#1db954",
-      amount: "- $3000",
-      date: "12/12/2023",
-      time: "12:00 PM",
-      medium: "CARD",
-      info: "1 month subscription",
-      status: "FAILED",
-    },
-    {
-      refrenceId: "#124567767",
-      description: "WALLET",
-      icon: RiWallet3Fill,
-      color: "#9099d3",
-      amount: "- $3000",
-      date: "12/12/2023",
-      time: "12:00 PM",
-      medium: "CARD",
-      info: "Wallet Top up",
-      status: "SUCCESS",
-    },
-    {
-      refrenceId: "#124567767",
-      description: "TRANSFER",
-      icon: BiTransfer,
-      color: "#0093d0",
-      amount: "- $3000",
-      date: "12/12/2023",
-      time: "12:00 PM",
-      medium: "CARD",
-      info: "Transfer to John",
-      status: "PENDING",
-    },
-    {
-      refrenceId: "#124567767",
-      description: "ITUNES",
-      icon: RiAppleFill,
-      color: "#000000",
-      amount: "- $3000",
-      date: "12/12/2023",
-      time: "12:00 PM",
-      medium: "CARD",
-      info: "1 month subscription",
-      status: "FAILED",
-    },
-  ];
+  const [data, setData] = useState([]);
+  //TODO ADD TYPE DECLEARATION TO THIS FILES
+  const { transaction } = useSelector((state: RootState) => state.users);
+
+  useEffect(() => {
+    if (!transaction) {
+      return;
+    }
+    setData(transaction.transactions);
+    console.log(data);
+
+    console.log("howfar");
+  }, [transaction]);
 
   const tableHeader: any = [
     "REFRENCE ID",
     "DESCRIPTION",
     "AMOUNT",
     "DATE",
-    "MEDIUM",
+    "BALANCE",
     "STATUS",
   ];
   return (
@@ -92,7 +47,8 @@ const Transaction: React.FC = () => {
             <TransactionSearchBar />
           </div>
           <div>
-            <Table tableData={tableData} tableHeader={tableHeader} />
+            {!data && <Noresult message={"No transaction result 🚀"} />}
+            {data && <Table tableData={data} tableHeader={tableHeader} />}
           </div>
         </div>
       </div>

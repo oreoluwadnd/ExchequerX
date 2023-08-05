@@ -14,17 +14,15 @@ import AuthMobileClose from "../AuthClose/AuthMobileClose";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-
   const dispatch = useAppDispatch();
-  const { isLoading, isError, isSuccess, message, user } = useSelector(
+  const { isLoading, isError, authenticated, message, user } = useSelector(
     (state: RootState) => state.auth
   );
   useEffect(() => {
-    if (isSuccess && user) {
+    if (authenticated) {
       navigate("/dashboard");
     }
-    console.log("isSuccess", user);
-  }, [isSuccess]);
+  }, [authenticated]);
   const loginFormData = {
     email: "",
     password: "",

@@ -31,7 +31,7 @@ const BillCard: React.FC<BillCardProps> = ({
         <span>{billDetails}</span>
       </div>
       <div className="billsCardButton">
-        <span className="billCardButtonText">PAY NOW</span>
+        <span className="billCardButtonText">COMING SOON</span>
       </div>
     </div>
   );

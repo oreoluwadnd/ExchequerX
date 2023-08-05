@@ -107,7 +107,7 @@
 
 
 .OverviewPageAccountCard {
-    width: 50%;
+    width: 100%;
 }
 
 .OverviewPageSendCardTitleWrapper {
@@ -154,7 +154,8 @@
 
     .overviewPageFloatingButtonPlus {
         bottom: 70px;
-        right: 5px;
+        right: 10px;
+        padding: 5px 5px;
     }
 
     .overviewPageFloatingButtonSend {
@@ -214,6 +215,5 @@
     .AccountCardBalanceSavingCard::-webkit-scrollbar {
         display: none;
     }
-
 
 }

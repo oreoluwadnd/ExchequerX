@@ -1,12 +1,21 @@
 .CardDetailsContainer {
-    width: 55%;
+    width: 100%;
     border-radius: 15px;
     box-sizing: border-box;
     margin: 2rem 0 0 0;
-    flex-direction: column;
+
     background-color: white;
+
     box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.2);
 
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayVisible {
+    display: block !important
 }
 
 .CardDetailsHeader {
@@ -70,7 +79,11 @@
     top: 29px;
     cursor: pointer;
     color: rgb(118, 119, 120);
-    ;
+}
+
+.CardCopyIcon:hover {
+
+    color: rgb(0, 0, 0);
 }
 
 .CardDetailTitle {

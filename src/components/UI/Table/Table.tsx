@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./Table.css";
-import { RiNetflixFill } from "react-icons/ri";
+// import { FaPersonArrowUpFromLine } from "react-icons/fa";
+import { MdPersonRemove } from "react-icons/md";
 
 interface TableProps {
   tableData: object[];
@@ -8,6 +9,31 @@ interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ tableData, tableHeader }) => {
+  function convertDateToTime(DateTime: Date): string {
+    // console.log(mongoDate);
+    const currentTime = new Date(DateTime);
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+
+    const timeString = `${padZero(hours)}:${padZero(minutes)}:${padZero(
+      seconds
+    )}`;
+
+    function padZero(value: number): string {
+      return value.toString().padStart(2, "0");
+    }
+    return timeString;
+  }
+
+  function convertMongoDBDateToDateMonthYear(mongoDate: Date): string {
+    console.log(mongoDate);
+    const convertToDate = new Date(mongoDate);
+    const options = { month: "long", day: "numeric", year: "numeric" };
+    const dateString = convertToDate.toLocaleDateString(undefined, options);
+    return dateString;
+  }
+
   return (
     <table className="tableWrapper">
       <thead>
@@ -24,15 +50,15 @@ const Table: React.FC<TableProps> = ({ tableData, tableHeader }) => {
       <tbody>
         {tableData.map((item: any, index: number) => {
           return (
-            <tr className="tableDataRow ">
-              {item.refrenceId && (
+            <tr className="tableDataRow " key={index}>
+              {item._id && (
                 <td className="tableData hideTable">
-                  <div>{item.refrenceId}</div>
+                  <div>{item._id}</div>
                 </td>
               )}
 
-              {item.icon && item.description && item.info && (
-                <td className="tableData ">
+              {item.transactionType && (
+                <td className="tableData">
                   <div className="tableDataDescription">
                     <div
                       className="tableDataDescriptionLogo"
@@ -40,16 +66,15 @@ const Table: React.FC<TableProps> = ({ tableData, tableHeader }) => {
                         backgroundColor: item.color,
                       }}
                     >
-                      {React.createElement(item.icon, {
-                        size: "30",
-                      })}
+                      <MdPersonRemove size={30} />
                     </div>
+
                     <div className="tableDataDescriptionText">
                       <div className="tableDataDescriptionDetails">
-                        {item.description}
+                        {item.transactionType}
                       </div>
                       <span className="tableDataDescriptionInfo">
-                        {item.info}
+                        {item.receiver.email}
                       </span>
                     </div>
                   </div>
@@ -64,26 +89,28 @@ const Table: React.FC<TableProps> = ({ tableData, tableHeader }) => {
                 </td>
               )}
 
-              {item.date && item.time && (
-                <td className="tableData hideTable">
+              {item.date && item.date && (
+                <td className="tableData ">
                   <div className="tableDataDate">
-                    <div>{item.date}</div>
-                    <span className="tableDataDateTime ">{item.time}</span>
+                    <div>{convertMongoDBDateToDateMonthYear(item.date)}</div>
+                    <span className="tableDataDateTime ">
+                      {convertDateToTime(item.date)}
+                    </span>
                   </div>
                 </td>
               )}
-              {item.medium && (
+              {item.balance && (
                 <td className="tableData hideTable">
-                  <div className="tableDataMedium">{item.medium}</div>
+                  <div className="tableDataMedium">{item.balance}</div>
                 </td>
               )}
               {item.status && (
                 <td className="tableData hideTable">
                   <div
                     className={`tableDataStatus ${
-                      item.status === "SUCCESS"
+                      item.status === "success"
                         ? "backGroundGreen"
-                        : item.status === "FAILED"
+                        : item.status === "failed"
                         ? "backGroundRed"
                         : "backGroundYellow"
                     }`}
@@ -101,3 +128,6 @@ const Table: React.FC<TableProps> = ({ tableData, tableHeader }) => {
 };
 
 export default Table;
+function padZero(hours: number) {
+  throw new Error("Function not implemented.");
+}

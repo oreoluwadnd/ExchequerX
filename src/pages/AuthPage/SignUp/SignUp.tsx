@@ -51,12 +51,6 @@ const SignUp: React.FC = () => {
           value: "^[A-Za-z]*$",
           message: "No special characters or numbers.",
         },
-        custom: {
-          length: {
-            isValid: (value: any) => value.length > 6,
-            message: "First name must be at least 8 characters",
-          },
-        },
       },
       lastName: {
         required: {
@@ -66,12 +60,6 @@ const SignUp: React.FC = () => {
         pattern: {
           value: "^[A-Za-z]*$",
           message: "No special characters or numbers.",
-        },
-        custom: {
-          length: {
-            isValid: (value: any) => value.length > 6,
-            message: "First name must be at least 8 characters",
-          },
         },
       },
       phone: {

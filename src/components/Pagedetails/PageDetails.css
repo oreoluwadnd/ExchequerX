@@ -3,6 +3,13 @@
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    max-width: 1500px;
+}
+
+.pageDetailsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .videoContainer {

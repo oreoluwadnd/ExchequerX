@@ -4,41 +4,47 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    /* border: 1px solid red; */
+    gap: 20px;
     padding: 7rem 1rem 7rem 1rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.solutionWrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .solutionText {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 250px;
+
 
 }
 
 
 .solutionText h2 {
     font-size: 2.25rem;
-    line-height: 1.2;
     white-space: pre-line;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -.035rem;
 }
 
 .solutionText p {
     font-size: 1.25rem;
     white-space: pre-line;
-    letter-spacing: -.035rem;
+
 }
 
 .solutionImg {
     max-width: 352px;
-
-    /* height: 200px; */
 }
 
 .solutionImgDiv {
-    margin-right: 250px;
     position: relative;
 }
 
@@ -55,37 +61,7 @@
     transform: translate(0, -20px);
 }
 
-@media screen and (max-width :1000px) {
-    .solutionText {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin-left: 30px;
 
-    }
-
-    .solutionImgDiv {
-        margin-right: 30px;
-        position: relative;
-    }
-
-}
-
-@media screen and (max-width :1240px) {
-    .solutionText {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin-left: 150px;
-
-    }
-
-    .solutionImgDiv {
-        margin-right: 150px;
-        position: relative;
-    }
-
-}
 
 @media screen and (max-width :700px) {
     .solution {

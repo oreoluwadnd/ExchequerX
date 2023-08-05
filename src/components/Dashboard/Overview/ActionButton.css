@@ -14,7 +14,8 @@
 }
 
 .requestButton:hover {
-    background-color: #FAFAFB;
+    background-color: black;
+    color: white;
 }
 
 .sendButtton {

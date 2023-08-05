@@ -53,6 +53,10 @@
     background: linear-gradient(106.15deg, #31C285 6.17%, #254ACD 102.88%)
 }
 
+.giftCard {
+    background: linear-gradient(106.15deg, #000000 6.17%, #474444 102.88%)
+}
+
 .singleCardBack {
     width: 100%;
     height: 100%;
@@ -97,12 +101,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .cardHolder p {
     font-size: 1.5rem;
     font-weight: 800;
     line-height: 0;
+    text-transform: capitalize;
 }
 
 .cardName p {

@@ -1,13 +1,8 @@
 .AccountCardWrapper {
     width: 100%;
-    box-shadow: 0 0 0.5rem rgba(104, 103, 103, 0.4);
-    /* border-radius: 15px; */
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+
     display: flex;
     flex-direction: column;
-    /* gap: 35px; */
-
 }
 
 .AccountCardHeader {

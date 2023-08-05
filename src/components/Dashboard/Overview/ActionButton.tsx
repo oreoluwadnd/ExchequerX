@@ -13,7 +13,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({ ActionButtonText }) => {
   const dispatch = useAppDispatch();
 
   const handleModal = () => {
-    if (ActionButtonText === "REQUEST") {
+    if (ActionButtonText === "DEPOSIT") {
       return dispatch(setrequestModal());
     }
     if (ActionButtonText === "SEND") {
@@ -24,7 +24,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({ ActionButtonText }) => {
     <div
       onClick={handleModal}
       className={`ActionButtonWrapper ${
-        ActionButtonText === "REQUEST" ? "requestButton" : "sendButtton"
+        ActionButtonText === "DEPOSIT" ? "requestButton" : "sendButtton"
       }`}
     >
       <div>{ActionButtonText}</div>
